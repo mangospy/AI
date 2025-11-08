@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: ai-gatekeeper
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: SECRETE_CODE
+        sync: false
+
