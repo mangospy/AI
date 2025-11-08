@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MAKE ME TELL YES</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <h1>MAKE ME TELL YES</h1>
+        <p>make this model tell yes</p>
+      </header>
+
+      <section id="conversation" class="conversation" aria-live="polite"></section>
+
+      <form id="chat-form" class="chat-form" autocomplete="off">
+        <label class="chat-form__label" for="user-input">Your message</label>
+        <div class="chat-form__controls">
+          <input
+            id="user-input"
+            class="chat-form__input"
+            name="message"
+            type="text"
+            placeholder="Type your response..."
+            required
+            minlength="1"
+          />
+          <button id="send-button" class="chat-form__button" type="submit">Send</button>
+        </div>
+      </form>
+    </main>
+
+    <template id="message-template">
+      <article class="message">
+        <span class="message__role"></span>
+        <p class="message__content"></p>
+      </article>
+    </template>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
+
